@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+<!--
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,3 +22,1310 @@
   <p>This is my first webpage hosted on GitHub!</p>
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌍 Countries GDP Growth</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Righteous&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===========================
+Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #E8F9FF,
+        #FFFFFF
+    );
+
+    color:#14324d;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+Navigation
+=========================== */
+
+#themeButton{
+
+padding:10px 16px;
+
+border:none;
+
+border-radius:20px;
+
+cursor:pointer;
+
+background:white;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+#themeButton:hover{
+
+transform:scale(1.1);
+
+}
+
+.dark{
+
+background:#102030;
+
+color:white;
+
+transition:.5s;
+
+}
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:18px;
+
+    background:#2D6CDF;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    z-index:999;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#FFD93D;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+Hero
+=========================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 10%;
+
+    background:linear-gradient(
+        135deg,
+        #65C9FF,
+        #6EE7B7
+    );
+
+    border-bottom-left-radius:80px;
+
+    border-bottom-right-radius:80px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:50%;
+
+    left:-80px;
+
+    top:-80px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    right:-60px;
+
+    bottom:-60px;
+
+}
+
+/* ===========================
+Globe Animation
+=========================== */
+
+.globe{
+
+    font-size:120px;
+
+    margin-bottom:20px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+Hero Text
+=========================== */
+
+.hero h1{
+
+    font-family:'Righteous',cursive;
+
+    font-size:70px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    text-shadow:3px 3px rgba(0,0,0,.15);
+
+}
+
+.hero h2{
+
+    font-size:32px;
+
+    color:white;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    max-width:900px;
+
+    color:white;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+Button
+=========================== */
+
+.button{
+
+    margin-top:45px;
+
+    display:inline-block;
+
+    background:#FFD93D;
+
+    color:#14324d;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    transform:scale(1.08);
+
+    background:white;
+
+}
+
+/* ===========================
+Cloud Animation
+=========================== */
+
+.cloud{
+
+    position:absolute;
+
+    font-size:55px;
+
+    opacity:.8;
+
+    animation:movecloud 18s linear infinite;
+
+}
+
+.cloud1{
+
+    top:120px;
+
+    left:-100px;
+
+}
+
+.cloud2{
+
+    top:220px;
+
+    right:-100px;
+
+    animation-duration:22s;
+
+}
+
+@keyframes movecloud{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(140vw);
+
+    }
+
+}
+
+/* ===========================
+Section Title
+=========================== */
+
+.section-title{
+
+    text-align:center;
+
+    font-family:'Righteous',cursive;
+
+    font-size:48px;
+
+    color:#2D6CDF;
+
+    margin-top:80px;
+
+    margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    font-size:20px;
+
+    color:#5c7285;
+
+    margin-bottom:50px;
+
+}
+
+/* ===========================
+Statistics
+=========================== */
+
+.statistics{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:60px 8%;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px) rotate(-2deg);
+
+}
+
+.stat-icon{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.stat-number{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#2D6CDF;
+
+}
+
+.stat-text{
+
+    font-size:20px;
+
+    margin-top:10px;
+
+}
+
+/* ===========================
+Countries
+=========================== */
+
+.countries{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:30px 8% 80px;
+
+}
+
+.country-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.country-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.country-card:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+}
+
+.country-flag{
+
+    font-size:70px;
+
+}
+
+.country-name{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-top:15px;
+
+}
+
+.gdp-value{
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:#28a745;
+
+    margin:15px 0;
+
+}
+
+.country-desc{
+
+    color:#6b7d90;
+
+}
+
+/* ===========================
+Animation
+=========================== */
+
+.fade{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero h2{
+
+    font-size:24px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+nav{
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.section-title{
+
+    font-size:36px;
+
+}
+
+}
+
+body::before{
+
+content:"🌎";
+
+position:fixed;
+
+font-size:180px;
+
+opacity:.05;
+
+top:120px;
+
+right:80px;
+
+pointer-events:none;
+
+animation:spin 40s linear infinite;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="#">🏠 Home</a>
+
+<a href="#">🌍 Countries</a>
+
+<a href="#">📈 GDP Trends</a>
+
+<a href="#">🗺 Continents</a>
+
+<a href="#">🏆 Rankings</a>
+
+<a href="#">📚 About</a>
+
+<button id="themeButton">🌙</button>
+
+
+</nav>
+
+<section class="hero">
+
+<div class="cloud cloud1">☁️</div>
+
+<div class="cloud cloud2">☁️</div>
+
+<div class="globe">🌎</div>
+
+<h1>Countries GDP Growth</h1>
+
+<h2>Explore the World's Economy Through Fun & Interactive Data</h2>
+
+<p>
+
+Welcome to an educational website that makes economic data easy to understand.
+Compare GDP growth across countries, discover regional trends,
+and visualize how economies change over time through colorful charts,
+interactive cards and engaging animations.
+
+</p>
+
+<a href="https://gdp-dashboard-miller.streamlit.app/" class="button">
+
+🚀 Start Exploring
+
+</a>
+
+</section>
+
+<!-- ===================================
+World GDP Snapshot
+=================================== -->
+
+<section class="statistics">
+
+    <h2 class="section-title">
+        📊 World GDP Snapshot
+    </h2>
+
+    <p class="section-subtitle">
+        A colorful overview of the world's economy
+    </p>
+
+    <div class="stats-grid">
+
+        <div class="stat-card fade">
+
+            <div class="stat-icon">🌎</div>
+
+            <div class="stat-number">195</div>
+
+            <div class="stat-text">
+                Countries
+            </div>
+
+        </div>
+
+        <div class="stat-card fade">
+
+            <div class="stat-icon">📈</div>
+
+            <div class="stat-number">4.2%</div>
+
+            <div class="stat-text">
+                Average GDP Growth
+            </div>
+
+        </div>
+
+        <div class="stat-card fade">
+
+            <div class="stat-icon">💰</div>
+
+            <div class="stat-number">$110T</div>
+
+            <div class="stat-text">
+                Global Economy
+            </div>
+
+        </div>
+
+        <div class="stat-card fade">
+
+            <div class="stat-icon">🚀</div>
+
+            <div class="stat-number">12</div>
+
+            <div class="stat-text">
+                Fast Growing Economies
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+Top GDP Growth Countries
+=================================== -->
+
+<section class="countries">
+
+    <h2 class="section-title">
+
+        🏆 Top GDP Growth Countries
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Example comparison of selected economies
+
+    </p>
+
+    <div class="country-grid">
+
+        <div class="country-card fade">
+
+            <div class="country-flag">
+
+                🇮🇳
+
+            </div>
+
+            <div class="country-name">
+
+                India
+
+            </div>
+
+            <div class="gdp-value">
+
+                +6.8%
+
+            </div>
+
+            <div class="country-desc">
+
+                Technology, services and domestic demand continue driving strong economic expansion.
+
+            </div>
+
+        </div>
+
+        <div class="country-card fade">
+
+            <div class="country-flag">
+
+                🇻🇳
+
+            </div>
+
+            <div class="country-name">
+
+                Vietnam
+
+            </div>
+
+            <div class="gdp-value">
+
+                +6.2%
+
+            </div>
+
+            <div class="country-desc">
+
+                Manufacturing and exports remain key contributors to economic growth.
+
+            </div>
+
+        </div>
+
+        <div class="country-card fade">
+
+            <div class="country-flag">
+
+                🇨🇳
+
+            </div>
+
+            <div class="country-name">
+
+                China
+
+            </div>
+
+            <div class="gdp-value">
+
+                +5.0%
+
+            </div>
+
+            <div class="country-desc">
+
+                Investment and industrial production continue supporting GDP performance.
+
+            </div>
+
+        </div>
+
+        <div class="country-card fade">
+
+            <div class="country-flag">
+
+                🇸🇬
+
+            </div>
+
+            <div class="country-name">
+
+                Singapore
+
+            </div>
+
+            <div class="gdp-value">
+
+                +4.1%
+
+            </div>
+
+            <div class="country-desc">
+
+                Financial services and technology sectors contribute significantly to growth.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+Fun Facts
+=================================== -->
+
+<section class="statistics">
+
+    <h2 class="section-title">
+
+        🎈 Fun Economic Facts
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Learning economics can be fun!
+
+    </p>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                🍕
+
+            </div>
+
+            <h3>
+
+                Pizza Index
+
+            </h3>
+
+            <p>
+
+                Some economists compare pizza prices across countries to estimate purchasing power.
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                🚗
+
+            </div>
+
+            <h3>
+
+                More Cars
+
+            </h3>
+
+            <p>
+
+                Growing GDP often leads to increased household income and higher vehicle ownership.
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                🏗️
+
+            </div>
+
+            <h3>
+
+                Infrastructure
+
+            </h3>
+
+            <p>
+
+                Roads, airports and public transport projects often boost economic activity.
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                🌱
+
+            </div>
+
+            <h3>
+
+                Green Economy
+
+            </h3>
+
+            <p>
+
+                Renewable energy investment is becoming an important driver of future GDP growth.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+Quote Banner
+=================================== -->
+
+<section style="padding:80px 10%;text-align:center;background:linear-gradient(135deg,#FFD93D,#FFE97A);margin-top:40px;">
+
+    <h2 style="font-size:48px;font-family:Righteous,cursive;color:#2D6CDF;">
+
+        🌎 "Economies Grow Through Innovation"
+
+    </h2>
+
+    <p style="font-size:24px;margin-top:20px;color:#14324d;max-width:900px;margin-left:auto;margin-right:auto;">
+
+        Explore countries, compare trends, and understand the world through colorful data visualization.
+
+    </p>
+
+</section>
+
+<!-- ===================================
+Footer
+=================================== -->
+
+<footer style="background:#2D6CDF;color:white;padding:60px 20px;text-align:center;">
+
+    <h2 style="font-family:Righteous,cursive;font-size:42px;">
+
+        🌍 Countries GDP Growth
+
+    </h2>
+
+    <p style="margin-top:20px;font-size:20px;">
+
+        📈 Learn • 🌎 Explore • 🚀 Compare
+
+    </p>
+
+    <br>
+
+    <p>
+
+        Educational Website for Data Visualization & Economics
+
+    </p>
+
+    <br>
+
+    <p>
+
+        Made with ❤️ using HTML & CSS
+
+    </p>
+
+    <br>
+
+    <p>
+
+        © 2026 Miller Theng
+
+    </p>
+
+<!-- ===================================
+Interactive GDP Dashboard
+=================================== -->
+
+<section style="padding:80px 8%;background:#f8fbff;">
+
+    <h2 class="section-title">
+
+        📊 GDP Growth Comparison
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Compare GDP growth among selected countries
+
+    </p>
+
+    <div style="
+        max-width:1100px;
+        margin:auto;
+        background:white;
+        border-radius:30px;
+        padding:40px;
+        box-shadow:0 15px 30px rgba(0,0,0,.08);
+    ">
+
+        <canvas id="gdpChart"></canvas>
+
+    </div>
+
+    <section class="statistics">
+
+    <h2 class="section-title">
+
+        🔍 Find a Country
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Search your favourite country
+
+    </p>
+
+    <div style="text-align:center;">
+
+        <input
+        id="countrySearch"
+        type="text"
+        placeholder="Type country name..."
+        style="
+            width:350px;
+            max-width:90%;
+            padding:18px;
+            border-radius:50px;
+            border:none;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+            font-size:18px;
+        ">
+
+    </div>
+
+    <section class="countries">
+
+<h2 class="section-title">
+
+🗺 GDP by Continent
+
+</h2>
+
+<div class="country-grid">
+
+<div class="country-card">
+
+🌏
+
+<h2>Asia</h2>
+
+<h3>Average Growth</h3>
+
+<div class="gdp-value">
+
+5.3%
+
+</div>
+
+</div>
+
+<div class="country-card">
+
+🌍
+
+<h2>Europe</h2>
+
+<h3>Average Growth</h3>
+
+<div class="gdp-value">
+
+1.8%
+
+</div>
+
+</div>
+
+<div class="country-card">
+
+🌎
+
+<h2>Americas</h2>
+
+<h3>Average Growth</h3>
+
+<div class="gdp-value">
+
+2.6%
+
+</div>
+
+</div>
+
+<div class="country-card">
+
+🌍
+
+<h2>Africa</h2>
+
+<h3>Average Growth</h3>
+
+<div class="gdp-value">
+
+3.9%
+
+</div>
+
+</div>
+
+</div>
+
+
+</section>
+
+</footer>
+
+
+</footer>
+
+<!-- GDP Dashboard -->
+<section style="padding:80px 8%;background:#f8fbff;">
+    <h2 class="section-title">📊 GDP Growth Comparison</h2>
+
+    <div style="max-width:1100px;margin:auto;background:white;
+        border-radius:30px;padding:40px;">
+        <canvas id="gdpChart"></canvas>
+    </div>
+</section>
+
+<!-- Search -->
+<section class="statistics">
+    <h2 class="section-title">🔍 Find a Country</h2>
+
+    <div style="text-align:center;">
+        <input id="countrySearch" type="text"
+        placeholder="Type country name..."
+        style="width:350px;padding:18px;border-radius:50px;">
+    </div>
+</section>
+
+<!-- Continent -->
+<section class="countries">
+
+<h2 class="section-title">🗺 GDP by Continent</h2>
+
+<div class="country-grid">
+
+<div class="country-card">🌏 Asia <div class="gdp-value">5.3%</div></div>
+<div class="country-card">🌍 Europe <div class="gdp-value">1.8%</div></div>
+<div class="country-card">🌎 Americas <div class="gdp-value">2.6%</div></div>
+<div class="country-card">🌍 Africa <div class="gdp-value">3.9%</div></div>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx=document.getElementById('gdpChart');
+
+new Chart(ctx,{
+type:'bar',
+data:{
+labels:['India','Vietnam','China','Singapore','USA','Japan'],
+datasets:[{
+label:'GDP Growth (%)',
+data:[6.8,6.2,5.0,4.1,2.3,1.1],
+borderWidth:2,
+borderRadius:10
+}]
+},
+options:{
+responsive:true,
+plugins:{legend:{display:false}},
+scales:{y:{beginAtZero:true}}
+}
+});
+</script>
+
+<script>
+document.getElementById("themeButton").onclick=function(){
+document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
+
+
+
